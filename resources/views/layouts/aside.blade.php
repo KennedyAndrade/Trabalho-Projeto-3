@@ -17,6 +17,13 @@
                     <i class="fa fa-th"></i> <span>Painel</span>
                 </a>
             </li>
+
+            <li>
+                <a href="{!! route('adm.artigos.index') !!}">
+                    <i class="fas fa-pencil-alt"></i> <span>Artigos</span>
+                </a>
+            </li>
+
         </ul>
         <!-- sidebar-menu -->
     </section>

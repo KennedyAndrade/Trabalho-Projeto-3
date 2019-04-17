@@ -7,10 +7,10 @@
         <li class="active"><i class="fa fa-th"></i> Painel</li>
         @endbreadcrumb
 
-        <!-- Main content --> 
+        <!-- Main content -->
         <section class="content container-fluid">
             <div class="row">
-
+                
             </div>
         </section>
     </div>
