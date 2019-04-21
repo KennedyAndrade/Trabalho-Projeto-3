@@ -13,6 +13,9 @@ Route::group(['prefix'=>'adm', 'as'=>'adm.', 'middleware'=>'roles', 'roles'=>['a
         Route::get('/', 'ArtigoController@index')->name('index');
         Route::get('/criar', 'ArtigoController@create')->name('create');
         Route::post('/', 'ArtigoController@store')->name('store');
+        Route::get('/{artigo}/editar', 'ArtigoController@edit')->name('edit');
+        Route::put('/{artigo}/editar', 'ArtigoController@update')->name('update');
+        Route::delete('/{artigo}', 'ArtigoController@destroy')->name('destroy');
     });
 
 });

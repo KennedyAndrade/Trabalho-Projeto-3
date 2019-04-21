@@ -20,38 +20,70 @@
                 </div>
 
                 <div class="col-md-12">
-                 <div class="chart-box">
-                     <div class="bs-example" data-example-id="hoverable-table">
-                         <table class="table table-hover table-striped">
-                             <thead>
-                                 <tr>
-                                     <th>#</th>
-                                     <th>Título</th>
-                                     <th>Descrição</th>
-                                     <!-- <th>Texto</th> -->
-                                     <th>Imagens</th>
-                                 </tr>
-                             </thead>
-                             <tbody>
-                                 @foreach ($artigos as $artigo)
-                                     <tr>
-                                         <td>{{ $artigo->id }}</td>
-                                         <td>{{ $artigo->titulo }}</td>
-                                         <td>{{ $artigo->descricao }}</td>
-                                         <!-- <td>{{ $artigo->texto }}</td> -->
-                                         <td>
-                                            <a href="{{ Storage::url($artigo->img_small) }}" class="btn btn-xs btn-primary">Thumbnail</a>
-                                            <a href="{{ Storage::url($artigo->img_large) }}" class="btn btn-xs btn-primary">Fooder</a>
-                                         </td>
+                    <div class="chart-box">
+                        <div class="bs-example" data-example-id="hoverable-table">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Título</th>
+                                        <th>Descrição</th>
+                                        <!-- <th>Texto</th> -->
+                                        <th>Imagens</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($artigos as $artigo)
+                                        <tr>
+                                            <td>{{ $artigo->id }}</td>
+                                            <td>{{ $artigo->titulo }}</td>
+                                            <td>{{ $artigo->descricao }}</td>
+                                            <!-- <td>{{ $artigo->texto }}</td> -->
+                                            <td>
+                                                <a href="{{ Storage::url($artigo->img_small) }}" class="btn btn-xs btn-primary">Thumbnail</a>
+                                                <a href="{{ Storage::url($artigo->img_large) }}" class="btn btn-xs btn-primary">Fooder</a>
+                                            </td>
 
-                                     @endforeach
-                                 </tbody>
-                             </table>
-                         </div>
-                     </div>
-                 </div>
+                                            <td class="text-right">
+                                                <a href="{!! route('adm.artigos.edit', $artigo->id) !!}" class="btn btn-xs btn-primary"><i class="fa fa-edit"></i> Editar</a>
+                                                <form style="display:inline" action="{!! route('adm.artigos.destroy', $artigo->id) !!}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button class="btn btn-xs btn-danger formConfirmDelete" type="button" data-titulo="{{ $artigo->titulo }}"><i class="fa fa-trash"></i> Deletar</button>
+                                                </form>
+                                            </td>
+                                        </td>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </section>
     </div>
+@endsection
+
+@section('script')
+    <script type="text/javascript">
+    $('body').on('click', '.formConfirmDelete', function(event){
+        event.preventDefault();
+        var form = $(this).closest('form');
+        var titulo = $(this).attr('data-titulo');
+        Swal.fire({
+            title: 'Você tem certeza que deseja deletar o artigo \''+ titulo +'\'?',
+            text: "Você não poderá reverter isso!",
+            type: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sim, exclua!'
+        }).then((result) => {
+            if (result.value) {
+                form.submit()
+            }
+        })
+    });
+    </script>
 @endsection

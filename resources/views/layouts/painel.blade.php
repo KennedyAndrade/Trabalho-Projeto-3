@@ -28,11 +28,14 @@
     <script src="{{ asset('painel/js/jquery.min.js') }}"></script>
     <script src="{{ asset('painel/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('painel/js/script.js') }}"></script>
+    <script src="{{ asset('painel/js/sweetalert.min.js') }}"></script>
 
     <script type="text/javascript">
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
     </script>
+
+    @yield('script')
 </body>
 </html>
