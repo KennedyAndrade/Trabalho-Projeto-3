@@ -15,7 +15,9 @@
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-
+                <li>
+                    <a href="{!! route('website') !!}"><i class="fa fa-globe"></i> Site</a>
+                </li>
                 <!-- User Account Menu -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -28,6 +30,11 @@
                             </div>
                             <p class="text-left">{{ auth()->user()->name }}<small>{{ auth()->user()->email }}</small> </p>
                         </li>
+                        @if (auth()->user()->hasRole('adm'))
+                            <li>
+                                <a href="{!! route('adm.index') !!}"> Painel</a>
+                            </li>
+                        @endif    
                         <li role="separator" class="divider"></li>
                         <li>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Sair</a>

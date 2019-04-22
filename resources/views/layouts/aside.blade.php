@@ -20,7 +20,13 @@
 
             <li>
                 <a href="{!! route('adm.artigos.index') !!}">
-                    <i class="fas fa-pencil-alt"></i> <span>Artigos</span>
+                    <i class="fa fa-pencil-alt"></i> <span>Artigos</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{!! route('adm.produtos.index') !!}">
+                    <i class="fa fa-cubes"></i> <span>Produtos</span>
                 </a>
             </li>
 
