@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers; 
 
 use Storage;
 use Validator;
@@ -145,7 +145,7 @@ class ProdutoController extends Controller
 
 
        session()->flash('flash-success','Editado com sucesso');
-       return redirect()->route('adm.produtos.edit', $produto->id);
+       return redirect()->route('adm.produtos.index');
     }
 
     /**

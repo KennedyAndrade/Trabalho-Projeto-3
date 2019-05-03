@@ -55,7 +55,7 @@
 
                             </div>
                             <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-save"></i> Salvar</button>
-                            <a href="{!! route('adm.artigos.index') !!}" class="btn btn-sm btn-default"><i class="fa fa-reply"></i> Voltar</a>
+                            <a href="{!! route('adm.produtos.index') !!}" class="btn btn-sm btn-default"><i class="fa fa-reply"></i> Voltar</a>
                             <hr>
                         </div>
                     </div>

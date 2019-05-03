@@ -48,7 +48,7 @@
                                                 <form style="display:inline" action="{!! route('adm.produtos.destroy', $produto->id) !!}" method="post">
                                                     @csrf
                                                     @method('delete')
-                                                    <button class="btn btn-xs btn-danger formConfirmDelete" type="button" data-titulo="{{ $produto->nome }}"><i class="fa fa-trash"></i> Deletar</button>
+                                                    <button class="btn btn-xs btn-danger formConfirmDelete" type="button" data-nome="{{ $produto->nome }}"><i class="fa fa-trash"></i> Deletar</button>
                                                 </form>
                                             </td>
                                         </td>
@@ -69,7 +69,7 @@
     $('body').on('click', '.formConfirmDelete', function(event){
         event.preventDefault();
         var form = $(this).closest('form');
-        var titulo = $(this).attr('data-nome');
+        var nome = $(this).attr('data-nome');
         Swal.fire({
             title: 'Você tem certeza que deseja deletar o produto \''+ nome +'\'?',
             text: "Você não poderá reverter isso!",

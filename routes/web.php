@@ -2,7 +2,7 @@
 
 Auth::routes();
 
-// base route 
+// base route
 Route::get('/', 'WebsiteController@index')->name('website');
 
 Route::group(['prefix'=>'adm', 'as'=>'adm.', 'middleware'=>'roles', 'roles'=>['adm']], function(){
@@ -29,4 +29,9 @@ Route::group(['prefix'=>'adm', 'as'=>'adm.', 'middleware'=>'roles', 'roles'=>['a
 
     });
 
+// Clientes
+    Route::group(['prefix'=>'clientes', 'as'=> 'clientes.'], function(){
+        Route::get('/', 'ClienteController@index')->name('index');
+
+    });
 });

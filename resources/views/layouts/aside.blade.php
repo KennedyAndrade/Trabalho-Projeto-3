@@ -19,6 +19,12 @@
             </li>
 
             <li>
+                <a href="{!! route('adm.clientes.index') !!}">
+                    <i class="fas fa-users"></i> <span>Clientes</span>
+                </a>
+            </li>
+
+            <li>
                 <a href="{!! route('adm.artigos.index') !!}">
                     <i class="fa fa-pencil-alt"></i> <span>Artigos</span>
                 </a>
