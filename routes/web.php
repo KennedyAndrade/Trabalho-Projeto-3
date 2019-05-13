@@ -34,4 +34,9 @@ Route::group(['prefix'=>'adm', 'as'=>'adm.', 'middleware'=>'roles', 'roles'=>['a
         Route::get('/', 'ClienteController@index')->name('index');
 
     });
+
+// Vendas
+    Route::group(['prefix'=>'vendas', 'as'=>'vendas.'], function(){
+        Route::get('/', 'VendasController@index')->name('index');
+    });
 });

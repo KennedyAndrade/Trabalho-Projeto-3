@@ -36,7 +36,15 @@
                 </a>
             </li>
 
+            <li>
+                <a href="{!! route('adm.vendas.index') !!}">
+                    <i class="fa fa-money-check-alt"></i> <span>Vendas</span>
+                </a>
+            </li>
+
         </ul>
         <!-- sidebar-menu -->
     </section>
 </aside>
+
+
