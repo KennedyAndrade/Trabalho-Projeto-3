@@ -15,8 +15,10 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
+    protected $guarded = [];
+
+    protected $dates = [
+        'dt_nasc', 'created_at', 'updated_at',
     ];
 
     /**
@@ -59,10 +61,14 @@ class User extends Authenticatable
                 }
             }
         }else{
-            if($this->hasRole($roles)){ 
+            if($this->hasRole($roles)){
                 return true;
             }
         }
         return false;
+    }
+
+    public function Vendas(){
+        return $this->hasMany(Vendas::class);
     }
 }

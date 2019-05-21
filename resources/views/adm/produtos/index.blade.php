@@ -32,6 +32,7 @@
                                         <th>Preço</th>
                                         <th>Desconto</th>
                                         <th>Preço com desconto</th>
+                                        <th>Gratuito</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -42,6 +43,7 @@
                                             <td>{{ $produto->preco }}</td>
                                             <td>{{ ($produto->desconto) ? 'Sim' : 'Não' }}</td>
                                             <td>{{ $produto->preco_desconto }}%</td>
+                                            <td>{{ ($produto->free) ? 'Sim' : 'Não' }}</td>
 
                                             <td class="text-right">
                                                 <a href="{!! route('adm.produtos.edit', $produto->id) !!}" class="btn btn-xs btn-primary"><i class="fa fa-edit"></i> Editar</a>

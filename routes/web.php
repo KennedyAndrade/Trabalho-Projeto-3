@@ -5,6 +5,15 @@ Auth::routes();
 // base route
 Route::get('/', 'WebsiteController@index')->name('website');
 
+Route::get('/compra/ebook/{id}', 'VendasController@venda')->name('compra.ebook');
+
+// Download e-ebooks
+    Route::get('e-books/{produto_id}', 'DownloadController@index')->name('download.ebook');
+    Route::post('compra/ebook/retorno', 'VendasController@webhookPagseguro')->name('webhooks.pagseguro');
+    Route::get('minhas-compras', 'VendasController@minhasCompras')->name('minhas_compras');
+
+// ADMIN
+
 Route::group(['prefix'=>'adm', 'as'=>'adm.', 'middleware'=>'roles', 'roles'=>['adm']], function(){
     Route::get('/', 'AdmController@index')->name('index');
 
@@ -38,5 +47,8 @@ Route::group(['prefix'=>'adm', 'as'=>'adm.', 'middleware'=>'roles', 'roles'=>['a
 // Vendas
     Route::group(['prefix'=>'vendas', 'as'=>'vendas.'], function(){
         Route::get('/', 'VendasController@index')->name('index');
+        Route::get('/{venda}', 'VendasController@show')->name('show');
+        Route::put('/{venda}', 'VendasController@update')->name('update');
     });
+
 });

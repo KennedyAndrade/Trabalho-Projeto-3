@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVendasTable extends Migration
+class AddDtPagamentoToVendasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateVendasTable extends Migration
      */
     public function up()
     {
-        Schema::create('vendas', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('');
-            $table->timestamps();
+        Schema::table('vendas', function (Blueprint $table) {
+            $table->datetime('dt_pagamento')->nullable();
         });
     }
 
@@ -27,6 +25,8 @@ class CreateVendasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vendas');
+        Schema::table('vendas', function (Blueprint $table) {
+            $table->dropColumn('dt_pagamento');
+        });
     }
 }

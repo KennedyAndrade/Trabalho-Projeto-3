@@ -53,14 +53,59 @@
                                     </fieldset>
                                 </div>
 
+                                <div class="col-md-12">
+                                    <fieldset>
+                                        <label>Descrição</label>
+                                        <textarea name="descricao" class="form-control">{{ old('descricao', $produto->descricao) }}</textarea>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <fieldset>
+                                        <label>Autor</label>
+                                        <input type="text" name="autor" class="form-control" value="{{ old('autor', $produto->autor) }}">
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <fieldset>
+                                        <label>Data de emissão</label>
+                                        <input type="date" name="dt_emissao" class="form-control" style="line-height: 15px" value="{{ old('dt_emissao', $produto->dt_emissao) }}">
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <label>Imagem</label>
+                                        <input type="file" name="foto">
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <label>PDF</label>
+                                        <input type="file" name="arquivo">
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <fieldset>
+                                        <div class="checkbox">
+                                            <label style="line-height: 22px;">
+                                                <input name="free" type="checkbox"  {{ ($produto->free) ? 'checked' : '' }}>
+                                                Produto gratuito? </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-save"></i> Salvar</button>
+                                <a href="{!! route('adm.produtos.index') !!}" class="btn btn-sm btn-default"><i class="fa fa-reply"></i> Voltar</a>
+                                <hr>
                             </div>
-                            <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-save"></i> Salvar</button>
-                            <a href="{!! route('adm.produtos.index') !!}" class="btn btn-sm btn-default"><i class="fa fa-reply"></i> Voltar</a>
-                            <hr>
                         </div>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </div>
-@endsection
+                    </form>
+                </div>
+            </section>
+        </div>
+    @endsection

@@ -1,21 +1,25 @@
-<nav class="navbar navbar-expand-lg bigMenu  navbar-secondary fixed-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-md  navbar-secondary fixed-top">
+    <a class="navbar-brand" href="index.html">
+        <img src="{!! asset('website/img/logo.png') !!}" class="img-fluid" alt="logo">
+    </a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <a class="navbar-brand" href="index.html">
-            <img src="{!! asset('website/img/logo.png') !!}" class="img-fluid" alt="logo">
-        </a>
+
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Sobre</a>
+                <a class="nav-link text-white" href="#home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">E-books</a>
+                <a class="nav-link text-white" href="#sobre">Sobre</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Contato</a>
+                <a class="nav-link text-white" href="#produtos">E-books</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#contato">Contato</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -34,16 +38,6 @@
                     <a class="dropdown-item text-success" href="#">Esportes</a>
                 </div>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link  text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Ver mais
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-success" href="#">Ajuda</a>
-                </div>
-            </li>
 
             @guest
                 <li class="nav-item">
@@ -55,17 +49,19 @@
                     </li>
                 @endif
             @else
+
                 <li class="nav-item dropdown">
                     <a class="nav-link  text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                        Sair
-                    </a>
+                        @if (Auth::user()->hasRole('adm'))
+                            <a class="dropdown-item" href="{{ route('adm.index') }}">Painel</a>
+                        @else
+                            <a class="dropdown-item" href="{{ route('minhas_compras') }}">Minhas Compras</a>
+                        @endif
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf

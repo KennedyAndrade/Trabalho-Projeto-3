@@ -47,7 +47,7 @@
 
                                <div class="col-md-12">
                                    <fieldset class="form-group">
-                                       <label>Fooder</label>
+                                       <label>Folder</label>
                                        <input type="file" name="image_large" required>
                                    </fieldset>
                                </div>

@@ -8,6 +8,8 @@
         <!--<span class="logo-lg"><img src="{!! asset('painel/img/logo-lg.png') !!}"></span>-->
     </a>
 
+    
+
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
         <!-- Sidebar toggle button-->
@@ -34,7 +36,7 @@
                             <li>
                                 <a href="{!! route('adm.index') !!}"> Painel</a>
                             </li>
-                        @endif    
+                        @endif
                         <li role="separator" class="divider"></li>
                         <li>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Sair</a>

@@ -12,5 +12,12 @@ class ClienteController extends Controller
     {
         $clientes = User::all();
         return view('adm.clientes.index', compact('clientes'));
+
+    }
+
+
+    public function show()
+    {
+        //
     }
 }

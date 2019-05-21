@@ -38,7 +38,7 @@
 
             <li>
                 <a href="{!! route('adm.vendas.index') !!}">
-                    <i class="fa fa-money-check-alt"></i> <span>Vendas</span>
+                    <i class="fa fa-shopping-bag"></i> <span>Vendas</span>
                 </a>
             </li>
 
@@ -46,5 +46,3 @@
         <!-- sidebar-menu -->
     </section>
 </aside>
-
-

@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="refresh" content="900">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="{!! asset('website/css/bootstrap.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('website/css/custom.css') !!}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
     @include('website/includes/navbar')
@@ -19,14 +20,30 @@
     <script src="{!! asset('website/js/bootstrap.min.js') !!}"></script>
 
     <script type="text/javascript">
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        if (scroll >= 50) {
-            $(".navbar").removeClass("bigMenu");
-        }else{
-            $(".navbar").addClass("bigMenu");
+    var offsetHeight = 80 + 1;
+    $('.navbar li a').click(function (event) {
+        var scrollPos = $('body').find($(this).attr('href')).offset().top - (offsetHeight - 1);
+
+        if ($("#navbarSupportedContent").hasClass("show")) {
+            $(".navbar-toggler").click();
         }
+        setTimeout(function(){
+            $('body,html').animate({
+                scrollTop: scrollPos
+            }, 600);
+        },400)
+        return false;
     });
+
+    $(function(){
+        var navMain = $(".navbar-collapse"); // avoid dependency on #id
+        // "a:not([data-toggle])" - to avoid issues caused
+        // when you have dropdown inside navbar
+        navMain.on("click", "a:not([data-toggle])", null, function () {
+            navMain.collapse('hide');
+        });
+    });
+
     </script>
 </body>
 </html>

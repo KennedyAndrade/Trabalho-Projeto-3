@@ -33,11 +33,11 @@
                                 <tbody>
                                     @foreach ($clientes as $cliente)
                                         <tr>
-                                            <td>{{ $clientes->id }}</td>
-                                            <td>{{ $clientes->nome }}</td>
-                                            <td>{{ $clientes->email }}</td>
-                                            <td>{{ \Carbon\Carbon::parse($clientes)->format('d/m/Y')}}</td>
-                                            <td>{{ $clientes->genero }}</td>
+                                            <td>{{ $cliente->id }}</td>
+                                            <td>{{ $cliente->name }}</td>
+                                            <td>{{ $cliente->email }}</td>
+                                            <td>{{ ($cliente->dt_nasc) ? $cliente->dt_nasc->format('d/m/Y') : ''}}</td>
+                                            <td>{{ $cliente->genero }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -48,3 +48,4 @@
             </div>
         </section>
     </div>
+@endsection

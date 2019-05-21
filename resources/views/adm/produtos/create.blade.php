@@ -34,7 +34,7 @@
                                 <div class="col-md-2">
                                     <fieldset class="form-group">
                                         <label>Desconto ativo?</label>
-                                        <select class="form-control" name="desconto">
+                                        <select class="form-control" name="desconto" style="padding: 5px 10px">
                                             <option value="0" {{ old('desconto') }}>Não</option>
                                             <option value="1" {{ old('desconto') }}>Sim</option>
                                         </select>
@@ -48,14 +48,58 @@
                                     </fieldset>
                                 </div>
 
+                                <div class="col-md-12">
+                                    <fieldset>
+                                        <label>Descrição</label>
+                                        <textarea name="descricao" class="form-control">{{ old('descricao') }}</textarea>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <fieldset>
+                                        <label>Autor</label>
+                                        <input type="text" name="autor" class="form-control" value="{{ old('autor') }}">
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <fieldset>
+                                        <label>Data de emissão</label>
+                                        <input type="date" name="dt_emissao" class="form-control" style="line-height: 15px" value="{{ old('dt_emissao') }}">
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <label>Imagem</label>
+                                        <input type="file" name="foto" required>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <label>PDF</label>
+                                        <input type="file" name="arquivo" required>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <fieldset>
+                                        <div class="checkbox">
+                                            <label style="line-height: 22px;">
+                                                <input name="free" type="checkbox">
+                                                Produto gratuito? </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
                             </div>
+                            <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-save"></i> Salvar</button>
+                            <hr>
                         </div>
-                        <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-save"></i> Salvar</button>
-                        <hr>
                     </div>
-                </div>
-            </form>
-        </div>
-    </section>
-</div>
+                </form>
+            </div>
+        </section>
+    </div>
 @endsection
