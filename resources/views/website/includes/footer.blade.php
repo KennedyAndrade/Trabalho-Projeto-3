@@ -65,9 +65,10 @@
                         <h6 class="font-weight-bold  mt-3 mb-4  text-center">Assine nossa newsletter e receba dicas e novidades para uma vida mais saudável</h6>
                         <!-- Icone Newsletter-->
                         <div class="thumbnail center well well-sm text-center">
-                            <form action="" method="post" role="form">
+                            <form action="{!! route('newslatters.store') !!}" method="post" role="form">
+                                @csrf
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control text-center" placeholder=">> SEU MELHOR E-MAIL AQUI! <<" aria-label="Recipiente para nickname" aria-describedby="basic-addon2">
+                                    <input type="text" name="email" class="form-control text-center" placeholder=">> SEU MELHOR E-MAIL AQUI! <<" aria-label="Recipiente para nickname" aria-describedby="basic-addon2">
                                     <div class="input-group-append">
                                         <span class="input-group-text" id="btnNewsLetter"><i class="fas fa-envelope mr-2"></i> Cadastrar</span>
                                     </div>

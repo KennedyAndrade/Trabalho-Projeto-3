@@ -18,6 +18,7 @@
     <script src="{!! asset('website/js/jquery-3.3.1.min.js') !!}"></script>
     <script src="{!! asset('website/js/popper.min.js') !!}"></script>
     <script src="{!! asset('website/js/bootstrap.min.js') !!}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
     <script type="text/javascript">
     var offsetHeight = 80 + 1;
@@ -45,5 +46,7 @@
     });
 
     </script>
+
+    @yield('script')
 </body>
 </html>
