@@ -3,13 +3,11 @@
 @section('content')
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        @breadcrumb(['title' => 'Artigos'])
+        @breadcrumb(['title' => 'Produtos'])
         <li><a href="{!! route('adm.index') !!}" ><i class="fa fa-th"></i> Painel</a></li>
         <li><a href="{!! route('adm.produtos.index') !!}" ><i class="fa fa-cubes"></i> Produtos</a></li>
         <li class="active"><i class="fa fa-edit"></i> Editar</li>
-        <li class="active"><i class="fa fa-trash"></i> Excluir</li>
-
-        <li class="active">{{ $produto->name }}</li>
+        <li class="active">{{ $produto->id }}</li>
 
         @endbreadcrumb
 
@@ -39,7 +37,7 @@
                                 <div class="col-md-2">
                                     <fieldset class="form-group">
                                         <label>Desconto ativo?</label>
-                                        <select class="form-control" name="desconto">
+                                        <select class="form-control" name="desconto" style="padding: 5px 10px">
                                             <option value="0" {{ (old('desconto', $produto->desconto) == 0) ? 'selected' : '' }}>Não</option>
                                             <option value="1" {{ (old('desconto', $produto->desconto) == 1) ? 'selected' : '' }}>Sim</option>
                                         </select>
@@ -54,42 +52,42 @@
                                 </div>
 
                                 <div class="col-md-12">
-                                    <fieldset>
+                                    <fieldset class="form-group">
                                         <label>Descrição</label>
                                         <textarea name="descricao" class="form-control">{{ old('descricao', $produto->descricao) }}</textarea>
                                     </fieldset>
                                 </div>
 
                                 <div class="col-md-4">
-                                    <fieldset>
+                                    <fieldset class="form-group">
                                         <label>Autor</label>
                                         <input type="text" name="autor" class="form-control" value="{{ old('autor', $produto->autor) }}">
                                     </fieldset>
                                 </div>
 
                                 <div class="col-md-3">
-                                    <fieldset>
+                                    <fieldset class="form-group">
                                         <label>Data de emissão</label>
                                         <input type="date" name="dt_emissao" class="form-control" style="line-height: 15px" value="{{ old('dt_emissao', $produto->dt_emissao) }}">
                                     </fieldset>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <fieldset>
+                                    <fieldset class="form-group">
                                         <label>Imagem</label>
                                         <input type="file" name="foto">
                                     </fieldset>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <fieldset>
+                                    <fieldset class="form-group">
                                         <label>PDF</label>
                                         <input type="file" name="arquivo">
                                     </fieldset>
                                 </div>
 
                                 <div class="col-md-12">
-                                    <fieldset>
+                                    <fieldset class="form-group">
                                         <div class="checkbox">
                                             <label style="line-height: 22px;">
                                                 <input name="free" type="checkbox"  {{ ($produto->free) ? 'checked' : '' }}>

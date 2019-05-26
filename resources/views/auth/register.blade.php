@@ -4,8 +4,7 @@
     <div class="form-body">
         <form method="post" action="{!! route('register') !!}" class="col-form" novalidate="">
             @csrf
-            <div class="col-logo"><a href="{!! route('website') !!}"><img alt="" src="{!! asset('painel/img/logo-lg.png') !!}"></a></div>
-            <header>Register</header>
+            <div class="col-logo"><a href="{!! route('website') !!}"><img alt="" src="{!! asset('website/img/logo_pequena.png') !!}"></a></div>
             <fieldset>
                 <section>
                     <div class="form-group has-feedback">

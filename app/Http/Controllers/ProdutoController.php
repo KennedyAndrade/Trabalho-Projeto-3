@@ -104,7 +104,7 @@ class ProdutoController extends Controller
     public function show(Produto $produto)
     {
         //
-    }
+    } 
 
     /**
     * Show the form for editing the specified resource.
