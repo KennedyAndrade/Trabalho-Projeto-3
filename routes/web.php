@@ -12,6 +12,7 @@ Route::get('/compra/ebook/{id}', 'VendasController@venda')->name('compra.ebook')
     Route::post('compra/ebook/retorno', 'VendasController@webhookPagseguro')->name('webhooks.pagseguro');
     Route::get('minhas-compras', 'VendasController@minhasCompras')->name('minhas_compras');
     Route::post('newslatters', 'NewslatterController@store')->name('newslatters.store');
+    Route::post('website/contato', 'ContatoController@store')->name('contato.store'); 
 
 // ADMIN
 

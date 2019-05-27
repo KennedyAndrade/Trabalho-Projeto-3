@@ -6,18 +6,24 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-4">
-                <form>
+                <form action="{{ 'contato.store' }}">
                     <div class="form-group text-center">
                         <input type="text" class="form-control" id="nome" placeholder="Nome" required>
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" id="email" placeholder="E-mail" required>
                     </div>
+                    <div class="form-group text-center">
+                        <input type="text" class="form-control" id="telefone" placeholder="Telefone" required>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="text" class="form-control" id="assunto" placeholder="Assunto" required>
+                    </div>
                     <div class="form-group">
                         <textarea class="form-control" rows="5" id="mensagem" placeholder="Mensagem" required></textarea>
                     </div>
                     <div class="text-center">
-                        <input class="btn btn-primary btn-lg text-center bg-success border border-success" type="submit" value="Enviar">
+                        <input class="btn btn-primary btn-lg text-center bg-success border border-success" id="btnContato" type="button" value="Enviar">
                     </div>
                     <br>
                     <br>

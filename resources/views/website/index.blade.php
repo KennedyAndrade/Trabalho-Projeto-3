@@ -47,5 +47,35 @@
             }
         });
     });
+
+
+    // Contato
+
+    $('#btnContato').on('click', function(e){
+        e.preventDefault();
+        var form = $(this).closest('form');
+        var data = form.serialize();
+        $.ajax({
+            type: form.attr('button'),
+            url: form.attr('action'),
+            data: data,
+            dataType: 'json',
+            success: function(response){
+                Swal.fire(
+                    'Sucesso!',
+                    response.message,
+                    'success'
+                )
+            },
+            error:function(response){
+                var obj = jQuery.parseJSON(response.responseText);
+                Swal.fire(
+                    'Oops...',
+                    obj.message,
+                    'error'
+                )
+            }
+        });
+    });
     </script>
 @endsection
