@@ -21,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
     <script type="text/javascript">
-    var offsetHeight = 80 + 1;
+    var offsetHeight = 120 + 1;
     $('.navbar li a').click(function (event) {
         var scrollPos = $('body').find($(this).attr('href')).offset().top - (offsetHeight - 1);
 
@@ -31,8 +31,8 @@
         setTimeout(function(){
             $('body,html').animate({
                 scrollTop: scrollPos
-            }, 600);
-        },400)
+            }, 200);
+        },200)
         return false;
     });
 

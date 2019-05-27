@@ -2,10 +2,10 @@
 
     <h1 class="section-header text-center">Artigos</h1>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-center">
 
             @foreach ($artigos as $artigo)
-                <div class="col-md-3">
+                <div class="col-md-3 col-lg-2">
                     <div class="card">
                         <img href="" src="{!! \Storage::url($artigo->img_small) !!}" class="card-img-top" alt="...">
                         <div class="card-body">

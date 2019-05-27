@@ -6,6 +6,8 @@
 
     @include('website.includes.carousel')
 
+    @include('website.includes.sobre')
+
     @include('website.includes.artigos', ['artigos' => \App\Artigo::orderBy('id', 'desc')->limit(4)->get()])
 
     @include('website.includes.produtos', ['produtos'=>\App\Produto::all()])

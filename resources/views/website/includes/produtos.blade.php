@@ -1,5 +1,5 @@
 <section class="e-books" id="produtos">
-    <h1 class="section-header text-center">Produtos</h1>
+    <h1 class="section-header text-center">E-books</h1>
     <div class="container">
         <div class="row justify-content-md-center">
             @foreach ($produtos as $produto)

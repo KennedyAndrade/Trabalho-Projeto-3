@@ -71,6 +71,7 @@ class VendasController extends Controller
 
             if ($err) {
                 // mensagem de erro pois não foi possivel gravar no pagseguro
+                return $err;
             }
                 $xml = json_encode(simplexml_load_string($response));
                 $xml = json_decode($xml, true);
