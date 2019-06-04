@@ -73,9 +73,15 @@ class VendasController extends Controller
                 // mensagem de erro pois não foi possivel gravar no pagseguro
                 return $err;
             }
-                $xml = json_encode(simplexml_load_string($response));
-                $xml = json_decode($xml, true);
-                $code = $xml['code'];
+
+            $xml = json_encode(simplexml_load_string($response), true);
+            $xml = json_decode($xml, true);
+
+            if(isset($xml['error'])){
+                return '<p><b>Erro: </b>'.$xml['error']['code'].'<br><b>Mensagem: </b>'. $xml['error']['message'].'</p>';
+            }
+
+            $code = $xml['code'];
 
             // Salvando link de pagamento para o usuario
             $linkPagamento = 'https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code='.$code;

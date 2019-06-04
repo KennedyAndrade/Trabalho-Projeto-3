@@ -1,4 +1,4 @@
-<section id="artigos">
+<section class="section" id="artigos">
 
     <h1 class="section-header text-center">Artigos</h1>
     <div class="container-fluid">

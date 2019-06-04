@@ -37,7 +37,6 @@ function pagseguroStatus($num)
 @endphp
 
 @section('content')
-    <div class="padding-menu"></div>
     <div class="container">
         @if (!\Auth::user()->vendas()->count())
             <h1>Não foi encontrado nenhum e-book</h1>

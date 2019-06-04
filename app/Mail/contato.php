@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class contato extends Mailable
+class Contato extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -16,7 +16,7 @@ class contato extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
         $this->data = $data;
     }
@@ -28,7 +28,7 @@ class contato extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.contato');
+        return $this->view('mails.contato')
         ->from(env('MAIL_FROM_ADDRESS'))
         ->subject('Formulário de Contato')
         ->with($this->data);

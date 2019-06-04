@@ -2,10 +2,10 @@
 
     <h1 class="section-header text-center">Sobre</h1>
     <div class="row justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-3 col-lg-2">
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#tab-1" role="tab">O que nós fazemos</a>
+                    <a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab">O que nós fazemos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#tab-2" role="tab">Quem nós somos</a>
@@ -23,8 +23,4 @@
             </div>
         </div>
     </div>
-
-
-    <!-- Tab panes -->
-
 </section>

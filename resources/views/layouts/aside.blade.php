@@ -20,7 +20,7 @@
 
             <li>
                 <a href="{!! route('adm.clientes.index') !!}">
-                    <i class="fas fa-users"></i> <span>Clientes</span>
+                    <i class="fa fa-users"></i> <span>Clientes</span>
                 </a>
             </li>
 
@@ -39,6 +39,12 @@
             <li>
                 <a href="{!! route('adm.vendas.index') !!}">
                     <i class="fa fa-shopping-bag"></i> <span>Vendas</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{!! route('adm.newsletters.index') !!}">
+                    <i class="fa fa-newspaper"></i> <span>Newsletter</span>
                 </a>
             </li>
 

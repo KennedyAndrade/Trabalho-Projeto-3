@@ -1,26 +1,27 @@
 
-<section class="e-books" id="contato">
+<section class="e-books section" id="contato">
     <div class="title text-center">
         <h1 class="section-header text-center">Contato</h1>
     </div>
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-md-4">
-                <form action="{{ 'contato.store' }}">
+                <form action="{!! route('contato.store') !!}" method="post">
+                    @csrf
                     <div class="form-group text-center">
-                        <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+                        <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="email" placeholder="E-mail" required>
+                        <input type="text" class="form-control" name="email" id="email" placeholder="E-mail" required>
                     </div>
                     <div class="form-group text-center">
-                        <input type="text" class="form-control" id="telefone" placeholder="Telefone" required>
+                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required>
                     </div>
                     <div class="form-group text-center">
-                        <input type="text" class="form-control" id="assunto" placeholder="Assunto" required>
+                        <input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto" required>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" rows="5" id="mensagem" placeholder="Mensagem" required></textarea>
+                        <textarea class="form-control" rows="5" name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
                     </div>
                     <div class="text-center">
                         <input class="btn btn-primary btn-lg text-center bg-success border border-success" id="btnContato" type="button" value="Enviar">

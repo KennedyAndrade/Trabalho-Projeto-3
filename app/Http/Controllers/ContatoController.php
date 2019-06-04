@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use Validator;
+use App\Mail\Contato;
 use Illuminate\Http\Request;
 
 class ContatoController extends Controller
@@ -25,5 +27,28 @@ class ContatoController extends Controller
             'mensagem' => '\'mensagem\'',
 
         ];
+
+        $emailDestino  = 'naoresponda@mindhealth.com.br';
+        $array = [
+            'nome' => $request->nome,
+            'email' => $request->email,
+            'telefone' => $request->telefone,
+            'assunto' => $request->assunto,
+            'mensagem' => $request->mensagem,
+        ];
+
+        try {
+            Mail::to($emailDestino)->send(new Contato($array));
+        } catch (\Exception $e) {
+            return response()->json([
+                'message' =>  $e->getMessage(),
+            ], 406);
+        }
+
+        return response()->json([
+            'message' =>  'Email enviado com sucesso!',
+        ], 201);
+
     }
+
 }

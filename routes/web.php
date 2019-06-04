@@ -11,8 +11,8 @@ Route::get('/compra/ebook/{id}', 'VendasController@venda')->name('compra.ebook')
     Route::get('e-books/{produto_id}', 'DownloadController@index')->name('download.ebook');
     Route::post('compra/ebook/retorno', 'VendasController@webhookPagseguro')->name('webhooks.pagseguro');
     Route::get('minhas-compras', 'VendasController@minhasCompras')->name('minhas_compras');
-    Route::post('newslatters', 'NewslatterController@store')->name('newslatters.store');
-    Route::post('website/contato', 'ContatoController@store')->name('contato.store'); 
+    Route::post('newsletters', 'NewsletterController@store')->name('newsletters.store');
+    Route::post('website/contato', 'ContatoController@store')->name('contato.store');
 
 // ADMIN
 
@@ -51,6 +51,11 @@ Route::group(['prefix'=>'adm', 'as'=>'adm.', 'middleware'=>'roles', 'roles'=>['a
         Route::get('/', 'VendasController@index')->name('index');
         Route::get('/{venda}', 'VendasController@show')->name('show');
         Route::put('/{venda}', 'VendasController@update')->name('update');
+    });
+
+// Newsletter
+    Route::group(['prefix'=>'newsletters', 'as'=>'newsletters.'], function(){
+        Route::get('/', 'NewsletterController@index')->name('index');
     });
 
 });

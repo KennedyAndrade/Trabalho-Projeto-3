@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Validator;
-use App\Newslatter;
+use App\Newsletter;
 use Illuminate\Http\Request;
 
-class NewslatterController extends Controller
+class NewsletterController extends Controller
 {
     /**
     * Store a newly created resource in storage.
@@ -17,7 +17,7 @@ class NewslatterController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'email' => 'required|string|min:6|max:255|unique:newslatters,email',
+            'email' => 'required|string|min:6|max:255|unique:newsletters,email',
         ];
         $errors = [];
         $fields = [
@@ -31,7 +31,7 @@ class NewslatterController extends Controller
         }
 
         try {
-            $newslatter = Newslatter::create([
+            $newsletter = Newsletter::create([
                 'email' => $request->email,
             ]);
         } catch (\Exception $e) {
@@ -42,7 +42,15 @@ class NewslatterController extends Controller
 
         return response()->json([
             'message' =>  'Cadastrado com sucesso!',
-            'created' => $newslatter,
+            'created' => $newsletter,
         ], 201);
     }
+
+
+    public function index()
+    {
+        $newsletters = Newsletter::all();
+        return view('adm.newsletters.index', compact('newsletters'));
+    }
+
 }

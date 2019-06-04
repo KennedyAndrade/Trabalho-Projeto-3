@@ -1,4 +1,4 @@
-html {scroll-behavior: smooth;}
+html {scroll-behavior: smooth;} 
 
 body{padding-top: 120px;  position: relative; overflow: hidden;}
 
@@ -52,8 +52,13 @@ footer ul.redes a{
     color: rgb(9, 218, 9);
 }
 
+.section{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 .section-header{
-    font-size:50px;
+    font-size:36px;
     padding-top: 21px;
     padding-bottom: 28px;
     color: #28A745;
@@ -73,14 +78,42 @@ footer ul.redes a{
 }
 
 #sobre {
-    min-height: 490px;
     background-color: #fafafa;
 }
 
 /* Section sobre */
 
-#sobre .nav{
+#sobre ul.nav{
     display: block;
+    border: 0px;
+}
+
+#sobre ul.nav li{
+    border-left: 3px solid #ccc;
+    transition: 0.5s;
+}
+
+#sobre ul li a{
+    color: #000000;
+}
+
+#sobre ul li a.active,
+#sobre ul li a:hover
+{
+    border: 0px;
+    color: #2A8541;
+    margin-left: -3px;
+    border-left: 3px solid #2A8541;
+    background-color: transparent;
+}
+
+#sobre ul.nav li:hover{
+    border-left: 3px solid #2A8541;
+    transition: 0.5s;
+}
+
+#produtos {
+    background-color: #fafafa;
 }
 
 /* mobile */

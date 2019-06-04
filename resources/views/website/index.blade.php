@@ -56,7 +56,7 @@
         var form = $(this).closest('form');
         var data = form.serialize();
         $.ajax({
-            type: form.attr('button'),
+            type: form.attr('method'),
             url: form.attr('action'),
             data: data,
             dataType: 'json',
