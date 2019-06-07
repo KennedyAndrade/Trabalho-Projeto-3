@@ -40,10 +40,10 @@ class ArtigoController extends Controller
     {
         $rules = [
             'titulo' =>'required|string|min:3|max:50',
-            'descricao' =>'required|string|min:6|max:50',
+            'descricao' =>'required|string|min:6|max:200',
             'texto' =>'required|string|min:50',
-            'image_small' =>'required|image|max:2000',
-            'image_large' =>'required|image|max:5000',
+            'image_small' =>'image|max:2000',
+            'image_large' =>'image|max:5000',
         ];
         $errors = [];
         $fields = [
@@ -89,7 +89,7 @@ class ArtigoController extends Controller
     */
     public function show(Artigo $artigo)
     {
-        //
+        return view('website.artigos.show', compact('artigo'));
     }
 
     /**

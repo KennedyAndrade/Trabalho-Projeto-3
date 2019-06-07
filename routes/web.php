@@ -13,6 +13,7 @@ Route::get('/compra/ebook/{id}', 'VendasController@venda')->name('compra.ebook')
     Route::get('minhas-compras', 'VendasController@minhasCompras')->name('minhas_compras');
     Route::post('newsletters', 'NewsletterController@store')->name('newsletters.store');
     Route::post('website/contato', 'ContatoController@store')->name('contato.store');
+    Route::get('website/artigos/{artigo}', 'ArtigoController@show')->name('artigo.show');
 
 // ADMIN
 

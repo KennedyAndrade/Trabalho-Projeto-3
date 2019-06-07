@@ -20,7 +20,7 @@
                     @csrf
                     @method('put')
                     <div class="col-md-12">
-                        <div class="chart-box"> 
+                        <div class="chart-box">
                             <div class="row">
                                 <div class="col-md-6">
                                     <fieldset class="form-group">
@@ -39,7 +39,7 @@
                                 <div class="col-md-12">
                                     <fieldset class="form-group">
                                         <label>Texto</label>
-                                        <textarea class="form-control" name="texto">{{ old('texto', $artigo->texto) }}</textarea>
+                                        <textarea class="form-control" name="texto" id="summernote">{{ old('texto', $artigo->texto) }}</textarea>
                                     </fieldset>
                                 </div>
 
@@ -54,4 +54,12 @@
         </div>
     </section>
 </div>
+@endsection
+
+@section('script')
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+    </script>
 @endsection

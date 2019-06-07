@@ -6,7 +6,17 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="d-flex align-items-center">
-                <img src="{!! asset('website/img/teste.jpg') !!}" class="d-block img-fluid w-100" alt="...">
+                <img src="{!! asset('website/img/slide.jpg') !!}" class="d-block img-fluid w-100" alt="...">
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-flex align-items-center">
+                <img src="{!! asset('website/img/slide9.jpg') !!}" class="d-block img-fluid w-100" alt="...">
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-flex align-items-center">
+                <img src="{!! asset('website/img/slide7.jpg') !!}" class="d-block img-fluid w-100" alt="...">
             </div>
         </div>
     </div>

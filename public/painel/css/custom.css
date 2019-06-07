@@ -3,10 +3,10 @@
 .col-form footer {padding: 15px 30px 15px !important;}
 .navbar-nav > .user-menu > .dropdown-menu > li.user-header{padding-bottom: 0px;}
 .navbar-nav > .user-menu > .dropdown-menu > li.user-header > p{margin-top: 25px;}
-.main-header.dark-bg {background: #281B89;}
-.main-header .logo.dark-bg {background: #2f209e;}
-.main-header.dark-bg .navbar-custom-menu ul.navbar-nav li.dropdown a:hover{background: #2f209e;}
-.main-header.dark-bg .nav .open > a, .dark-bg .nav .open > a:focus, .dark-bg.nav .open > a:hover{background: #2f209e}
+.main-header.dark-bg {background: #202020;}
+.main-header .logo.dark-bg {background: #2A2A2A;}
+.main-header.dark-bg .navbar-custom-menu ul.navbar-nav li.dropdown a:hover{background: #333;}
+.main-header.dark-bg .nav .open > a, .dark-bg .nav .open > a:focus, .dark-bg.nav .open > a:hover{background: #333}
 .main-header .sidebar-toggle::before {content: none !important;}
 .sidebar-toggle{margin-top: 1px;}
 @media (min-width: 768px) {
@@ -33,3 +33,7 @@ label{text-transform: uppercase; font-size: 11px;}
 textarea{resize: vertical;}
 
 .navbar-nav > li > a{color: #fff !important;}
+
+.classeButton{
+    margin-right: 10px;
+}
