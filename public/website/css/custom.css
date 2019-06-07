@@ -1,4 +1,4 @@
-html {scroll-behavior: smooth;} 
+html {scroll-behavior: smooth;}
 
 body{padding-top: 120px;  position: relative; overflow: hidden;}
 
@@ -10,7 +10,9 @@ body{padding-top: 120px;  position: relative; overflow: hidden;}
 
 .navbar .navbar-brand > img{width: 100px;transition: 1s}
 
-.navbar-nav li:hover{background-color: rgba(0,0,0,.1);}
+.navbar-nav li:hover,
+.navbar-nav li a.active
+{background-color: rgba(0,0,0,.1); color: rgba(0,0,0,.1)}
 
 .carousel, .item, .active {
     height:100%;
@@ -50,6 +52,15 @@ body{padding-top: 120px;  position: relative; overflow: hidden;}
 
 footer ul.redes a{
     color: rgb(9, 218, 9);
+
+}
+
+footer .redesSociais a{
+    transition: color .5s;
+    margin: 0 5px
+}
+footer ul.redesSociais a:hover{
+    color: #29A745;
 }
 
 .section{

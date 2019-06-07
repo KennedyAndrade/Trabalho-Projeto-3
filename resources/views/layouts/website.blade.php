@@ -22,12 +22,19 @@
 
     <script type="text/javascript">
     var offsetHeight = 120 + 1;
-    $('.navbar li a').click(function (event) {
+    $(document).on("scroll", onScroll);
+    $('.navbar li a, .footerNav li a').click(function (event) {
         var scrollPos = $('body').find($(this).attr('href')).offset().top - (offsetHeight - 1);
 
         if ($("#navbarSupportedContent").hasClass("show")) {
             $(".navbar-toggler").click();
         }
+
+        $('.navbar li a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+
         setTimeout(function(){
             $('body,html').animate({
                 scrollTop: scrollPos
@@ -35,6 +42,23 @@
         },200)
         return false;
     });
+
+
+    function onScroll(event){
+        var scrollPos = $(document).scrollTop();
+        $('.navbar li a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top - (offsetHeight - 1) <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('.navbar li a').removeClass("active");
+                currLink.addClass("active");
+            }
+            else{
+                currLink.removeClass("active");
+            }
+        });
+    }
+
 
     $(function(){
         var navMain = $(".navbar-collapse"); // avoid dependency on #id

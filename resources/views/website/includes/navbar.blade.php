@@ -10,7 +10,7 @@
 
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link text-white" href="{{ (\Request::route()->getName() == 'website') ? '#home' : route('website') }}">Home</a>
+                <a class="nav-link text-white active" href="{{ (\Request::route()->getName() == 'website') ? '#home' : route('website') }}">Home</a>
             </li>
 
             @if (\Request::route()->getName() == 'website')

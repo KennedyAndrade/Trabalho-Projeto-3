@@ -17,15 +17,15 @@
                 <div class="col-md-2 mx-auto">
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-success">Informações</h5>
-                    <ul class="list-unstyled">
+                    <ul class="list-unstyled footerNav">
                         <li>
-                            <a href="#!" class="text-white">Sobre</a>
+                            <a href="#sobre" class="text-white">Sobre</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Artigos</a>
+                            <a href="#artigos" class="text-white">Artigos</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Ebooks</a>
+                            <a href="#produtos" class="text-white">Ebooks</a>
                         </li>
                         <li>
                             <a href="#!" class="text-white">Termos e condições de uso</a>
@@ -83,7 +83,7 @@
             <hr>
             <div class="text-center py-3 ">
                 <h3 class="font-weight-bold white-text  text-success text-center">Redes Sociais</h3>
-                <ul class="list-inline redes text-center">
+                <ul class="list-inline redes text-center redesSociais">
                     <a href="https://www.facebook.com/Mind-Health-1017661845098135/?modal=admin_todo_tour" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
                     <a href="https://www.instagram.com/mind_healthms/?hl=pt-b" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
                     <a href="" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>

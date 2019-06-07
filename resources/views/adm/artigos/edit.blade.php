@@ -7,9 +7,8 @@
         <li><a href="{!! route('adm.index') !!}" ><i class="fa fa-th"></i> Painel</a></li>
         <li><a href="{!! route('adm.artigos.index') !!}" ><i class="fas fa-pencil-alt"></i> Artigos</a></li>
         <li class="active"><i class="fa fa-edit"></i> Editar</li>
-        <li class="active"><i class="fa fa-trash"></i> Excluir</li>
 
-        <li class="active">{{ $artigo->name }}</li>
+        <li class="active">{{ $artigo->id }}</li>
 
         @endbreadcrumb
 
