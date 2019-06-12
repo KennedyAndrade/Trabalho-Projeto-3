@@ -1,6 +1,6 @@
 html {scroll-behavior: smooth;}
 
-body{padding-top: 120px;  position: relative; overflow: hidden;}
+body{padding-top: 120px;  position: relative; overflow-x: hidden;}
 
 .navbar{
     height: 120px !important;
