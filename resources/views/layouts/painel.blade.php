@@ -12,9 +12,8 @@
     <link href="{{ asset('painel/css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-flash-1.5.6/b-html5-1.5.6/r-2.2.2/datatables.min.css"/>
     <!-- include summernote css/js -->
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+    <link rel="stylesheet" href="{!! asset('painel/css/summernote.css') !!}">
     <link href="{{ asset('painel/css/custom.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="painel/css/summernote.css">
 
 </head>
 <body class="{{ (in_array(Request::route()->getName(), ['password.email', 'password.reset', 'login'])) ? 'body-bg-color' : 'sidebar-mini'}}">
