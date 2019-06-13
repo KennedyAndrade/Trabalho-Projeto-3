@@ -14,6 +14,7 @@
     <!-- include summernote css/js -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
     <link href="{{ asset('painel/css/custom.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="painel/css/summernote.css">
 
 </head>
 <body class="{{ (in_array(Request::route()->getName(), ['password.email', 'password.reset', 'login'])) ? 'body-bg-color' : 'sidebar-mini'}}">
@@ -33,10 +34,12 @@
     <script src="{{ asset('painel/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('painel/js/script.js') }}"></script>
     <script src="{{ asset('painel/js/sweetalert.min.js') }}"></script>
+    <script src="{!! asset('painel/js/summernote.min.js') !!}"></script>
+    <script src="{!! asset('painel/js/summernote-pt-BR.js') !!}"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-flash-1.5.6/b-html5-1.5.6/r-2.2.2/datatables.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+
 
     <script type="text/javascript">
     $(function () {
