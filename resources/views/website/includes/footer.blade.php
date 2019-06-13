@@ -28,7 +28,7 @@
                             <a href="#produtos" class="text-white">Ebooks</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Termos e condições de uso</a>
+                            <a href="javascript:void(0)" class="text-white" data-toggle="modal" data-target="#termos">Termos e condições de uso</a>
                         </li>
                     </ul>
                 </div>
@@ -99,4 +99,82 @@
             </div>
             <!-- Copyright -->
         </footer>
+    </div>
+
+
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="termos" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="termos">Termos e condições de uso</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Aos usuários da Mind & Health,
+                        obrigado por dedicar este tempo para ler o Termos e Condições do site Mind & Health.
+                    </p>
+
+                    <p>
+                        Estas informações o ajudarão a utilizar a Plataforma da Mind & Health.
+                        É muito importante que conheça as nossas políticas, como protegemosos seus dados e o seu dinheiro,
+                        por esta razão, é necessário que leia e compreenda os Termos e condições de uso do Mind & Health, em
+                        especial as cláusulas a seguir destacadas:
+                    </p>
+
+                    <ol class="text-justify">
+                        <li>
+                            <p>Nosso site oferece informações em artigos e em e-books gratuitos e e-books pagos. <b>E isso não exclui a
+                            consulta de um profissional da saúde</b>, caso algo não fique claro e você tenha problemas de saúde.</p>
+                        </li>
+
+                        <li>
+                            <p><b>Não poderão cadastrar-se e tampouco utilizar os serviços do Mind & Health os menores de 18 anos</b>, pessoas que
+                            não tenham capacidade para contratar ou aqueles usuários que tenham dados cadastrais com irregularidades ou que
+                            tenham sido suspensos da plataforma do Mind & Health, temporária ou definitivamente.</p>
+                        </li>
+
+                        <li>
+                            <p><b>O usuário é o único responsável pelos dados cadastrais fornecidos</b>. O fornecimento de informações falsas ou
+                            incorretas poderá sujeitar o Usuário à responsabilização nas esferas cível, administrativa e criminal, na
+                            forma prevista em lei.</p>
+                        </li>
+                        <li>
+                            <p><b>A senha de utilização do Mind & Health é pessoal e intransferível</b>. Em caso de tentativa de acesso indevido ou
+                            não autorizado, o Usuário deverá comunicar a Mind & Health o mais rápido possível.</p>
+                        </li>
+
+                        <li>
+                            <p><b>Cadastro</b>. Apenas será confirmado o cadastramento do Usuário que preencher todos os campos obrigatórios do
+                            cadastro, com informações exatas, precisas e verdadeiras. O Usuário declara e assume o compromisso de atualizar
+                            os dados inseridos em seu cadastro (“Dados Pessoais”) sempre que for necessário. Ao se cadastrar no Mind & Health,
+                            o Usuário poderá utilizar todos os serviços disponibilizados, declarando, para tanto, ter lido, compreendido e
+                            aceitado os respectivos Termos e Condições de uso de cada um destes serviços que passam a fazer parte integrante
+                            destes Termos e condições gerais quando concluído o cadastro. O Usuário poderá acessar sua conta através de e-mail
+                            ou apelido (login) e senha e compromete-se a não informar a terceiros esses dados, responsabilizando-se integralmente
+                            pelo uso que deles seja feito.</p>
+                        </li>
+
+                        <li>
+                            <p><b>Direitos Autorais</b>. A Mind & Health, garante o direito nos códigos de programação e garante os direitos autorais
+                            e copyright do site. Em caso de cópias, não concedidas, o infrator será penalizado perante a: <a href="http://www.planalto.gov.br/ccivil_03/leis/l9610.htm" target="blank">Lei nº. 9.610/98</a></p>
+                        </li>
+
+                        <li>
+                            <p><b>Mudanças nos Termos e Condições de Uso</b>. Nosso contrato e documentos de Termos e Condições de Uso, <b>poderá ser
+                            modificado a qualquer momento</b>, ao concordar com o esse documento de Termos e Condições de Uso, você terá ciência,
+                            com todos os termos e possíveis mudanças.</p>
+                        </li>
+
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
     </div>
