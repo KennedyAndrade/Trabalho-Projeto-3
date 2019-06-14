@@ -58,5 +58,6 @@ Route::group(['prefix'=>'adm', 'as'=>'adm.', 'middleware'=>'roles', 'roles'=>['a
     Route::group(['prefix'=>'newsletters', 'as'=>'newsletters.'], function(){
         Route::get('/', 'NewsletterController@index')->name('index');
     });
-
 });
+
+Route::post('/summernote', 'SummernoteFileUploadController@upload')->name('summernote.upload');

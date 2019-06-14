@@ -67,7 +67,27 @@
 @section('script')
     <script type="text/javascript">
     $(document).ready(function() {
-        $('#summernote').summernote();
+        $('#summernote').summernote({
+            onImageUpload: function(files, editor, welEditable) {
+                sendFile(files[0], editor, welEditable);
+            }
+        });
     });
+
+    function sendFile(file, editor, welEditable) {
+           data = new FormData();
+           data.append("file", file);
+           $.ajax({
+               data: data,
+               type: "POST",
+               url: "{!! route('summernote.upload') !!}",
+               cache: false,
+               contentType: false,
+               processData: false,
+               success: function(response) {
+                   //editor.insertImage(welEditable, response);
+               }
+           });
+       }
     </script>
 @endsection

@@ -17,7 +17,7 @@ class CreateArtigosTable extends Migration
             $table->bigIncrements('id');
             $table->string('titulo');
             $table->string('descricao');
-            $table->text('texto');
+            $table->binary('texto');
             $table->string('img_small');
             $table->string('img_large');
             $table->timestamps();
