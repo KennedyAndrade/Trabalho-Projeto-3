@@ -20,6 +20,7 @@
     <script src="{!! asset('website/js/bootstrap.min.js') !!}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
+
     <script type="text/javascript">
     var offsetHeight = 120 + 1;
     $(document).on("scroll", onScroll);

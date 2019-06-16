@@ -68,26 +68,32 @@
     <script type="text/javascript">
     $(document).ready(function() {
         $('#summernote').summernote({
-            onImageUpload: function(files, editor, welEditable) {
-                sendFile(files[0], editor, welEditable);
+            callbacks : {
+                onImageUpload: function(image) {
+                    uploadImage(image[0]);
+                }
             }
         });
     });
 
-    function sendFile(file, editor, welEditable) {
-           data = new FormData();
-           data.append("file", file);
-           $.ajax({
-               data: data,
-               type: "POST",
-               url: "{!! route('summernote.upload') !!}",
-               cache: false,
-               contentType: false,
-               processData: false,
-               success: function(response) {
-                   //editor.insertImage(welEditable, response);
-               }
-           });
-       }
-    </script>
+    function uploadImage(image) {
+        var data = new FormData();
+        data.append("image",image);
+        $.ajax ({
+            data: data,
+            type: "POST",
+            url: "{!! route('adm.summernote.upload') !!}",
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(url) {
+                var image = url;
+                $('#summernote').summernote("insertImage", image);
+            },
+            error: function(data) {
+                console.log(data);
+            }
+        });
+    }
+</script>
 @endsection

@@ -8,19 +8,19 @@ Route::get('/', 'WebsiteController@index')->name('website');
 Route::get('/compra/ebook/{id}', 'VendasController@venda')->name('compra.ebook');
 
 // Download e-ebooks
-    Route::get('e-books/{produto_id}', 'DownloadController@index')->name('download.ebook');
-    Route::post('compra/ebook/retorno', 'VendasController@webhookPagseguro')->name('webhooks.pagseguro');
-    Route::get('minhas-compras', 'VendasController@minhasCompras')->name('minhas_compras');
-    Route::post('newsletters', 'NewsletterController@store')->name('newsletters.store');
-    Route::post('website/contato', 'ContatoController@store')->name('contato.store');
-    Route::get('website/artigos/{artigo}', 'ArtigoController@show')->name('artigo.show');
+Route::get('e-books/{produto_id}', 'DownloadController@index')->name('download.ebook');
+Route::post('compra/ebook/retorno', 'VendasController@webhookPagseguro')->name('webhooks.pagseguro');
+Route::get('minhas-compras', 'VendasController@minhasCompras')->name('minhas_compras');
+Route::post('newsletters', 'NewsletterController@store')->name('newsletters.store');
+Route::post('website/contato', 'ContatoController@store')->name('contato.store');
+Route::get('website/artigos/{artigo}', 'ArtigoController@show')->name('artigo.show');
 
 // ADMIN
 
 Route::group(['prefix'=>'adm', 'as'=>'adm.', 'middleware'=>'roles', 'roles'=>['adm']], function(){
     Route::get('/', 'AdmController@index')->name('index');
 
-// Artigo
+    // Artigo
     Route::group(['prefix'=>'artigos', 'as'=>'artigos.'], function(){
         Route::get('/', 'ArtigoController@index')->name('index');
         Route::get('/criar', 'ArtigoController@create')->name('create');
@@ -30,7 +30,7 @@ Route::group(['prefix'=>'adm', 'as'=>'adm.', 'middleware'=>'roles', 'roles'=>['a
         Route::delete('/{artigo}', 'ArtigoController@destroy')->name('destroy');
     });
 
-// Produto
+    // Produto
     Route::group(['prefix'=>'produtos', 'as'=> 'produtos.'], function(){
         Route::get('/', 'ProdutoController@index')->name('index');
         Route::get('/criar', 'ProdutoController@create')->name('create');
@@ -41,23 +41,25 @@ Route::group(['prefix'=>'adm', 'as'=>'adm.', 'middleware'=>'roles', 'roles'=>['a
 
     });
 
-// Clientes
+    // Clientes
     Route::group(['prefix'=>'clientes', 'as'=> 'clientes.'], function(){
         Route::get('/', 'ClienteController@index')->name('index');
 
     });
 
-// Vendas
+    // Vendas
     Route::group(['prefix'=>'vendas', 'as'=>'vendas.'], function(){
         Route::get('/', 'VendasController@index')->name('index');
         Route::get('/{venda}', 'VendasController@show')->name('show');
         Route::put('/{venda}', 'VendasController@update')->name('update');
     });
 
-// Newsletter
+    // Newsletter
     Route::group(['prefix'=>'newsletters', 'as'=>'newsletters.'], function(){
         Route::get('/', 'NewsletterController@index')->name('index');
     });
-});
 
-Route::post('/summernote', 'SummernoteFileUploadController@upload')->name('summernote.upload');
+
+    Route::post('/summernote/upload', 'SummernoteController@store')->name('summernote.upload');
+
+});
