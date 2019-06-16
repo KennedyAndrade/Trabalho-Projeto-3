@@ -60,7 +60,7 @@
 
 @section('script')
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
-
+    <script type="text/javascript">
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
