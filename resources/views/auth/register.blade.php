@@ -87,7 +87,7 @@
 
         // Update the text indicator
         if(val !== "") {
-            text.innerHTML = "Força: " + "<strong>" + strength[result.score] + "</strong>" + "<span class='feedback'>" +  " " + "</span";
+            text.innerHTML = "Força: " + "<strong>" + strength[result.score] + "</strong>" + "<span class='feedback'>" +  " " + "</span>";
         }
         else {
             text.innerHTML = "";
