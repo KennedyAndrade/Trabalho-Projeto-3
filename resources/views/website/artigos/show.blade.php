@@ -7,17 +7,12 @@
     <section class="section">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4">
-                    <img class="img-fluid" src="{{ Storage::url($artigo->img_large) }}" alt="">
-                </div>
-
-                <div class="col-md-8 text-justify">
+                <div class="col-md-12 text-justify">
                 {!! $artigo->texto !!}
                 </div>
             </div>
         </div>
     </section>
-
 
     @include('website.includes.footer')
 

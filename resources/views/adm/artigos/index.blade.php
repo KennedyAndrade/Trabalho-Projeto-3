@@ -41,7 +41,6 @@
                                             <!-- <td>{{ $artigo->texto }}</td> -->
                                             <td>
                                                 <a href="{{ Storage::url($artigo->img_small) }}" class="btn btn-xs btn-primary">Thumbnail</a>
-                                                <a href="{{ Storage::url($artigo->img_large) }}" class="btn btn-xs btn-primary">Fooder</a>
                                             </td>
 
                                             <td class="text-right">

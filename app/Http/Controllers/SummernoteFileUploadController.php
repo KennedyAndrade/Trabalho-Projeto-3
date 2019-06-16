@@ -9,7 +9,7 @@ class SummernoteFileUploadController extends Controller
 {
     public function upload(Request $request)
     {
-        $file = Stoage::disk('public')->put('uploads', $request->file);
-        return response()->json(['image' => $file], 201);
+        $file = Storage::disk('public')->put('uploads', $request->image);
+        return Storage::url($file);
     }
 }

@@ -44,17 +44,10 @@
                                         <input type="file" name="image_small">
                                     </fieldset>
                                 </div>
-
-                                <div class="col-md-12">
-                                    <fieldset class="form-group">
-                                        <label>Folder</label>
-                                        <input type="file" name="image_large">
-                                    </fieldset>
-                                </div>
-
                             </div>
                         </div>
                         <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-save"></i> Salvar</button>
+                        <a href="{!! route('adm.artigos.index') !!}" class="btn btn-sm btn-default"><i class="fa fa-reply"></i> Voltar</a>
                         <hr>
                     </div>
                 </div>

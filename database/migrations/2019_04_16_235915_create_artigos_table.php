@@ -19,7 +19,6 @@ class CreateArtigosTable extends Migration
             $table->string('descricao');
             $table->binary('texto');
             $table->string('img_small');
-            $table->string('img_large');
             $table->timestamps();
         });
     }

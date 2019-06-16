@@ -43,9 +43,6 @@
                             <a href="#!" class="text-white">Dúvidas</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Ajuda</a>
-                        </li>
-                        <li>
                             <a href="#!" class="text-white">mindhealth@hotmail.com</a>
                         </li>
                         <li>

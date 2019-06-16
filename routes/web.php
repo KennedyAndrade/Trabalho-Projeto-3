@@ -60,6 +60,6 @@ Route::group(['prefix'=>'adm', 'as'=>'adm.', 'middleware'=>'roles', 'roles'=>['a
     });
 
 
-    Route::post('/summernote/upload', 'SummernoteController@store')->name('summernote.upload');
+    Route::post('/summernote/upload', 'SummernoteFileUploadController@upload')->name('summernote.upload');
 
 });

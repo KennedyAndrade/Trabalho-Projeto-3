@@ -43,7 +43,6 @@ class ArtigoController extends Controller
             'descricao' =>'required|string|min:6|max:200',
             'texto' =>'required|string|min:50',
             'image_small' =>'image|max:2000',
-            'image_large' =>'image|max:5000',
         ];
         $errors = [];
         $fields = [
@@ -51,7 +50,6 @@ class ArtigoController extends Controller
             'descricao' => '\'descrição\'',
             'texto' => '\'texto\'',
             'image_small' => '\'thumbnail\'',
-            'image_large' => '\'fooder\'',
 
         ];
 
@@ -69,7 +67,6 @@ class ArtigoController extends Controller
                 'descricao' => $request->descricao,
                 'texto' => $request->texto,
                 'img_small' => Storage::disk('public')->put('artigos/thumbnail', $request->image_small),
-                'img_large' => Storage::disk('public')->put('artigos/fooder', $request->image_large),
 
             ]);
         } catch (\Exception $e) {
