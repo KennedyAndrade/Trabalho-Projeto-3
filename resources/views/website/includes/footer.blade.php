@@ -43,7 +43,7 @@
                             <a href="#!" class="text-white">Dúvidas</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">mindhealth@hotmail.com</a>
+                            <a href="#!" class="text-white">mindhealth87@gmail.com</a>
                         </li>
                         <li>
                             <a href="#!" class="text-white"></a>
