@@ -25,7 +25,7 @@
                                     <fieldset class="form-group">
                                         <label>Título</label>
                                         <input class="form-control" name="titulo" type="text" value="{{ old('titulo', $artigo->titulo) }}" >
-                                    </fieldset>
+                                    </fieldset> 
                                 </div>
 
                                 <div class="col-md-6">

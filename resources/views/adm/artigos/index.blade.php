@@ -1,4 +1,4 @@
-@extends('layouts.painel')
+@extends('layouts.painel') 
 
 @section('content')
     <div class="content-wrapper">

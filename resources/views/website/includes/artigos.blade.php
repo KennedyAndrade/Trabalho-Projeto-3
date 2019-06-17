@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             @foreach ($artigos as $artigo)
-                <div class="col-md-3 col-lg-2">
+                <div class="col-md-3">
                     <div class="card">
                         <img href="" src="{!! \Storage::url($artigo->img_small) !!}" class="card-img-top" alt="...">
                         <div class="card-body">
