@@ -42,6 +42,13 @@
                                     </fieldset>
                                 </div>
 
+                                <div class="col-md-12">
+                                    <fieldset class="form-group">
+                                        <label>Thumbnail</label>
+                                        <input type="file" name="image_small" value="{{ old('image_small', $artigo->image_small) }}">
+                                    </fieldset>
+                                </div>
+
                             </div>
                         </div>
                         <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-save"></i> Salvar</button>

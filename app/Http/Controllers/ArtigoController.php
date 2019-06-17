@@ -113,12 +113,14 @@ class ArtigoController extends Controller
             'titulo' =>'required|string|min:3|max:50',
             'descricao' =>'required|string|min:6|max:50',
             'texto' =>'required|string|min:50',
+            'image_small' =>'image|max:2000',
        ];
        $errors = [];
        $fields = [
            'titulo' => '\'título\'',
            'descricao' => '\'descrição\'',
            'texto' => '\'texto\'',
+           'image_small' => '\'thumbnail\'',
        ];
 
        $validator = Validator::make($request->all(), $rules, $errors, $fields);
@@ -133,6 +135,7 @@ class ArtigoController extends Controller
                'titulo' => $request->titulo,
                'descricao' => $request->descricao,
                'texto' => $request->texto,
+               'img_small' => Storage::disk('public')->put('artigos/thumbnail', $request->image_small),
 
            ]);
        } catch (\Exception $e) {
