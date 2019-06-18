@@ -51,8 +51,9 @@
                 </section>
             </fieldset>
             <footer class="text-right">
-                <button type="submit" class="btn btn-info pull-right">Registrar</button>
-                <a href="{!! route('login') !!}" class="button button-secondary">Login</a>
+                <a href="{!! route('login') !!}" class="btn btn-sm btn-default">Login</a>
+                <button type="submit" class="btn btn-sm btn-info">Registrar</button>
+
             </footer>
         </form>
     </div>

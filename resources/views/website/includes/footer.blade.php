@@ -40,13 +40,15 @@
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-success">Atendimento</h5>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!" class="text-white">Dúvidas</a>
+                            <p>
+                                Telefone de contato:<br>
+                                (12) 3885-2130
+                            </p>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">mindhealth87@gmail.com</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white"></a>
+                            <p>
+                                mindhealth87@gmail.com
+                            </p>
                         </li>
                     </ul>
                 </div>
@@ -83,8 +85,7 @@
                 <ul class="list-inline redes text-center redesSociais">
                     <a href="https://www.facebook.com/Mind-Health-1017661845098135/?modal=admin_todo_tour" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
                     <a href="https://www.instagram.com/mind_healthms/?hl=pt-b" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
-                    <a href="" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="https://twitter.com/MindHealth7" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
                 </ul>
             </div>
             <hr>

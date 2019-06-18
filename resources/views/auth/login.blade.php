@@ -1,11 +1,11 @@
-@extends('layouts.painel') 
+@extends('layouts.painel')
 
 @section('content')
     <div class="form-body">
         <form method="post" action="{{ route('login') }}" class="col-form" >
             @csrf
             <div class="col-logo">
-                <a href="{!! route('adm.index') !!}">
+                <a href="{!! route('website') !!}">
                     <img alt="" src="{!! asset('website/img/logo_pequena.png') !!}" class="img-responsive center-block" />
                 </a>
             </div>
@@ -47,7 +47,8 @@
                 </section>
             </fieldset>
             <footer class="text-right">
-                <button type="submit" class="btn btn-success btn-sm pull-right">Entrar</button>
+                <a href="{!! route('website') !!}" class="btn btn-sm btn-default"><i class="fa fa-reply"></i> Voltar</a>
+                <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-sign-in-alt"></i> Entrar</button>
             </footer>
         </form>
     </div>
