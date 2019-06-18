@@ -52,7 +52,7 @@
             </fieldset>
             <footer class="text-right">
                 <a href="{!! route('login') !!}" class="btn btn-sm btn-default">Login</a>
-                <button type="submit" class="btn btn-sm btn-info">Registrar</button>
+                <button type="submit" class="btn btn-sm btn-success">Registrar</button>
 
             </footer>
         </form>
