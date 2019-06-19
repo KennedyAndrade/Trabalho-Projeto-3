@@ -9,6 +9,7 @@
 .main-header.dark-bg .nav .open > a, .dark-bg .nav .open > a:focus, .dark-bg.nav .open > a:hover{background: #333}
 .main-header .sidebar-toggle::before {content: none !important;}
 .sidebar-toggle{margin-top: 1px;}
+.classePadding{padding:10px}
 @media (min-width: 768px) {
     .sidebar-mini.sidebar-collapse .main-header .logo{color:#fff}
 }

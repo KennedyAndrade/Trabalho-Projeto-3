@@ -50,6 +50,8 @@ body{padding-top: 120px;  position: relative; overflow-x: hidden;}
     padding-top: 150px;
 }
 
+.classePadding{padding:10px}
+
 footer ul.redes a{
     color: rgb(9, 218, 9);
 
